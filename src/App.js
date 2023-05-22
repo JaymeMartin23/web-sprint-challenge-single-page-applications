@@ -1,15 +1,15 @@
 import React from "react";
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import OrderForm from './OrderForm';
 
 function App() {
   return (
     <div>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/pizza" component={OrderForm} />
-      </Switch>
+      <Routes>
+        <Route exact path="/" element={ <Home />} />
+        <Route path="/pizza" element={ <OrderForm />} />
+      </Routes>
     </div>
   );
 }
